@@ -1,0 +1,13 @@
+.annotation .annotation-author-details {
+  padding: 2px 0;
+}
+
+.annotation .annotation-author-details .created-by {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.annotation .annotation-author-details .created-at {
+  color: var(--font-light);
+  font-size: 11px;
+}

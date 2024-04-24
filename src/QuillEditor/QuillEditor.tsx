@@ -1,4 +1,5 @@
 import Quill from 'quill';
+import { Delta, QuillOptions } from 'quill/core';
 import { useLayoutEffect, useRef } from 'react';
 import { useQuillEditor } from './QuillEditorRoot';
 
@@ -7,7 +8,11 @@ import 'quill/dist/quill.core.css';
 
 interface QuillEditorProps {
 
-  placeholder: string;
+  placeholder?: string;
+
+  readOnly?: boolean;
+
+  value?: string;
 
 }
 
@@ -18,7 +23,16 @@ export const QuillEditor = (props: QuillEditorProps) => {
   const { setQuill } = useQuillEditor();
 
   useLayoutEffect(() => {
-    const quill = new Quill(el.current, { placeholder: props.placeholder });
+    const options: QuillOptions = {
+      placeholder: props.placeholder,
+      readOnly: props.readOnly
+    };
+
+    const quill = new Quill(el.current, options);
+
+    if (props.value)
+      quill.setContents(new Delta().insert(props.value));
+
     setQuill(quill);
   }, []);
 

@@ -1,32 +1,39 @@
-.annotation.empty {
-  background-color: #fff;
-  border-radius: 6px;
-  position: relative;
-  width: 340px;
-}
-
-.annotation .annotation-header {
-  align-items: flex-end;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px 6px 15px;
-}
-
 .annotation .annotation-toolbar-wrapper {
   padding-bottom: 5px;
 }
 
 .annotation .annotation-comment-wrapper {
-  padding: 5px 15px 15px 15px;
+  padding: 5px 12px 5px 12px;
 }
 
 .annotation.empty::after {
-  background-color: var(--blue);
-  border-radius: 6px 0 0 6px;
+  background-color: var(--c-blue);
   bottom: 0;
   content: '';
   left: 0;
   position: absolute;
   top: 0;
   width: 3px;
+}
+
+.annotation .annotation-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 15px 0 15px;
+}
+
+.annotation button.save {
+  all: unset;
+  background-color: var(--bright-blue);
+  color: #fff;
+  cursor: pointer;
+}
+
+.annotation button.save-arrow {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
 }

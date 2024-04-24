@@ -2,6 +2,7 @@ import { Avatar } from './Avatar';
 import { QuillEditor, QuillEditorRoot, QuillEditorToolbar } from './QuillEditor';
 
 import './EmptyAnnotation.css';
+import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
 
 export const EmptyAnnotation = () => {
 
@@ -21,7 +22,9 @@ export const EmptyAnnotation = () => {
         </div>
 
         <div className="annotation-footer">
-
+          <button className="save save-arrow">
+            <ArrowRight size={20} />
+          </button>
         </div>
       </QuillEditorRoot>
     </div>

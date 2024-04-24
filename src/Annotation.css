@@ -1,0 +1,29 @@
+.annotation {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  position: relative;
+  width: 340px;
+}
+
+.annotation.private {
+  background-color: var(--gray-200);
+}
+
+.annotation .annotation-header {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px 6px 12px;
+}
+
+.annotation .annotation-header .annotation-header-left {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.annotation .private-avatar .avatar-inner {
+  background-color: var(--gray-800);
+  color: #fff;
+}

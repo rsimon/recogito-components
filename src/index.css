@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 html, body {
-  --blue: #13BFF6;
+  --bright-blue: #07529a;
+
+  --c-blue: #13BFF6;
 
   --gray-900: #202125;
+  --gray-800: #475569;
   --gray-700: #6f747c;
   --gray-600: #818992;
   --gray-500: #93989f;
@@ -12,6 +15,9 @@ html, body {
   --gray-200: #e2e5e9;
   --gray-100: #f3f4f7;
   --gray-50: #f6f7f9;
+
+  --font-tiny: 13px;
+  --font-light: var(--gray-700);
 
   background-color: #ccc;
   font-family: Inter;

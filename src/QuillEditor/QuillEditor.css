@@ -3,10 +3,17 @@
   border-radius: 3px;
 }
 
+.quill-rte.ql-disabled {
+  background-color: transparent;
+}
+
 .quill-rte .ql-editor {
   height: 80px;
   outline: none;
   padding: 10px;
+}
+.quill-rte.ql-disabled .ql-editor {
+  height: fit-content;
 }
 
 .quill-rte .ql-editor.ql-blank::before {

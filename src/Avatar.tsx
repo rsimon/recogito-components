@@ -1,6 +1,12 @@
 import './Avatar.css';
 
-export const Avatar = () => {
+interface AvatarProps {
+
+  color?: string;
+
+}
+
+export const Avatar = (props: AvatarProps) => {
 
   return (
     <div className="avatar">
