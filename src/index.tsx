@@ -9,6 +9,7 @@ ReactDOM.createRoot(document.getElementById('app')!).render(
     <EmptyAnnotation />
 
     <Annotation 
+      isEditable={true}
       tags={['historical reference', 'meter']}
       showReplyField={true} />
 

@@ -3,12 +3,14 @@ import { Avatar } from './Avatar';
 import { AuthorDetails } from './AuthorDetails';
 import { QuillEditor, QuillEditorRoot } from './QuillEditor';
 import { ReplyField } from './ReplyField';
+import { TagList } from './Tags/TagList';
 import { cn } from './util';
 
 import './Annotation.css';
-import { TagList } from './Tags/TagList';
 
 interface AnnotationProps {
+
+  isEditable?: boolean;
 
   isNote?: boolean;
 
@@ -59,14 +61,16 @@ export const Annotation = (props: AnnotationProps) => {
       <div className="annotation-comment-wrapper">
         <QuillEditorRoot>
           <QuillEditor 
-            readOnly={true} 
+            readOnly={!props.isEditable}
             value={props.value || 'Lorem ipsum dolor sit amet consectetur.' }/>
         </QuillEditorRoot>
       </div>
 
       {props.tags?.length > 0 && (
         <div className="annotation-taglist-wrapper">
-          <TagList tags={props.tags} />
+          <TagList 
+            tags={props.tags} 
+            isEditable={props.isEditable} />
         </div>
       )}
 
