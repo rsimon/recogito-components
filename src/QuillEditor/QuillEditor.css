@@ -1,0 +1,40 @@
+.quill-rte {
+  background-color: #F3F4F7;
+  border-radius: 3px;
+}
+
+.quill-rte .ql-editor {
+  height: 80px;
+  outline: none;
+  padding: 10px;
+}
+
+.quill-rte .ql-editor.ql-blank::before {
+  color: var(--gray-500);
+  font-style: normal;
+  left: 10px;
+}
+
+.quill-rte .ql-editor p {
+  margin: 0; 
+  padding: 0;
+}
+
+.quill-rte .ql-editor img {
+  display: inline-block;
+}
+
+.quill-rte-toolbar {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.quill-rte-toolbar button {
+  all: unset;
+  cursor: pointer;
+}
+
+.quill-rte-toolbar button:disabled {
+  color: var(--gray-400);
+  cursor: inherit;
+}
