@@ -51,16 +51,18 @@
 }
 
 .annotation .annotation-comment-wrapper {
-  padding: 5px 12px 2px 12px;
+  padding: 5px 12px 10px 12px;
 }
 
 .annotation .quill-rte {
+  padding: 10px;
   background-color: #F3F4F7;
   border-radius: 3px;
 }
 
 .annotation .quill-rte.ql-disabled {
   background-color: transparent;
+  padding: 7px 2px 5px 2px;
 }
 
 .annotation .quill-rte .ql-editor.ql-blank::before {
@@ -72,7 +74,7 @@
 }
 
 .annotation .annotation-taglist-wrapper {
-  padding: 0 20px 15px 20px;
+  padding: 0 12px 15px 12px;
 }
 
 .annotation .annotation-footer {

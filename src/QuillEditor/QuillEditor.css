@@ -1,6 +1,7 @@
 .quill-rte .ql-editor {
+  margin: 0;
   outline: none;
-  padding: 10px;
+  padding: 0;
 }
 
 .quill-rte.ql-disabled .ql-editor {

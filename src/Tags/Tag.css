@@ -6,8 +6,12 @@
   font-size: 11.5px;
   gap: 0.25rem;
   line-height: 220%;
-  padding: 0 0 0 0.4rem;
+  padding: 0 0.4rem;
   position: relative;
+}
+
+.annotation .tag.editable {
+  padding-right: 0;
 }
 
 .annotation.readonly .tag {
