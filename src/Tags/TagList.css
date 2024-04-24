@@ -1,0 +1,7 @@
+.annotation .taglist {
+  display: flex;
+  font-size: 13px;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0; 
+}

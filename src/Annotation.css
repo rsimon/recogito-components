@@ -7,8 +7,26 @@
   width: 340px;
 }
 
-.annotation.private {
+.annotation.readonly {
   background-color: var(--gray-200);
+}
+
+.annotation.note {
+  background-color: #F9EEC8;
+}
+
+.annotation.note.readonly {
+  background-color: #e1d7b4;
+}
+
+.annotation:not(.note)::after {
+  background-color: var(--c-blue);
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3px;
 }
 
 .annotation .annotation-header {
@@ -27,3 +45,55 @@
   background-color: var(--gray-800);
   color: #fff;
 }
+
+.annotation .annotation-toolbar-wrapper {
+  padding-bottom: 5px;
+}
+
+.annotation .annotation-comment-wrapper {
+  padding: 5px 12px 2px 12px;
+}
+
+.annotation .quill-rte {
+  background-color: #F3F4F7;
+  border-radius: 3px;
+}
+
+.annotation .quill-rte.ql-disabled {
+  background-color: transparent;
+}
+
+.annotation .quill-rte .ql-editor.ql-blank::before {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.annotation.note .quill-rte:not(.ql-disabled) {
+  background-color: #e1d7b4
+}
+
+.annotation .annotation-taglist-wrapper {
+  padding: 0 20px 15px 20px;
+}
+
+.annotation .annotation-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 15px 0 15px;
+}
+
+.annotation button.save {
+  all: unset;
+  background-color: var(--bright-blue);
+  color: #fff;
+  cursor: pointer;
+}
+
+.annotation button.save-arrow {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+}
+

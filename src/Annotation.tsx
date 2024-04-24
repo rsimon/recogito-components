@@ -2,12 +2,23 @@ import { Detective, DotsThree } from '@phosphor-icons/react';
 import { Avatar } from './Avatar';
 import { AuthorDetails } from './AuthorDetails';
 import { QuillEditor, QuillEditorRoot } from './QuillEditor';
+import { ReplyField } from './ReplyField';
+import { cn } from './util';
 
 import './Annotation.css';
+import { TagList } from './Tags/TagList';
 
 interface AnnotationProps {
 
+  isNote?: boolean;
+
   isPrivate?: boolean;
+
+  isReadOnly?: boolean;
+
+  showReplyField?: boolean;
+
+  tags?: string[];
 
   value?: string;
 
@@ -15,8 +26,15 @@ interface AnnotationProps {
 
 export const Annotation = (props: AnnotationProps) => {
 
+  const className = cn(
+    'annotation',
+    props.isNote ? 'note' : undefined,
+    props.isPrivate ? 'private' : undefined,
+    props.isReadOnly ? 'readonly' : undefined
+  );
+
   return (
-    <div className={props.isPrivate ? 'annotation private' : 'annotation'}>
+    <div className={className}>
       <div className="annotation-header">
         <div className="annotation-header-left">
           {props.isPrivate ? (
@@ -30,7 +48,7 @@ export const Annotation = (props: AnnotationProps) => {
           ) : (
             <Avatar />
           )}
-          <AuthorDetails isPrivate={true} />
+          <AuthorDetails isPrivate={props.isPrivate} />
         </div>
 
         <div className="annotation-header-right">
@@ -45,6 +63,16 @@ export const Annotation = (props: AnnotationProps) => {
             value={props.value || 'Lorem ipsum dolor sit amet consectetur.' }/>
         </QuillEditorRoot>
       </div>
+
+      {props.tags?.length > 0 && (
+        <div className="annotation-taglist-wrapper">
+          <TagList tags={props.tags} />
+        </div>
+      )}
+
+      {props.showReplyField && !props.isReadOnly && (
+        <ReplyField />
+      )}
     </div>
   )
 
