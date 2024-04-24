@@ -1,0 +1,22 @@
+{
+  "name": "recogito-components",
+  "version": "0.1.0",
+  "description": "Prototyping UI components for the updated Recogito annotation interface",
+  "main": "src/index.tsx",
+  "type": "module",
+  "scripts": {
+    "start": "vite"
+  },
+  "author": "Rainer Simon",
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
