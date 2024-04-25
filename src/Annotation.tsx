@@ -66,7 +66,7 @@ export const Annotation = (props: AnnotationProps) => {
           tags={props.tags} />
       ))}
 
-      {props.showReplyField && !props.isReadOnly && !props.isEditable && (
+      {props.showReplyField && !props.isReadOnly && (
         <ReplyField />
       )}
     </div>

@@ -25,6 +25,18 @@
   position:relative;
 }
 
+.annotation.readonly .annotation-interstitial .label {
+  background-color: var(--gray-200);
+}
+
+.annotation.note .annotation-interstitial .label {
+  background-color: #F9EEC8;
+}
+
+.annotation.readonly.note .annotation-interstitial .label {
+  background-color: #e1d7b4;
+}
+
 .annotation-interstitial .label:hover {
   background-color: var(--gray-50);
   box-shadow: none;
