@@ -1,20 +1,8 @@
-import { ChangeEvent, useLayoutEffect, useRef, useState } from 'react';
+import { InputHTMLAttributes, useLayoutEffect, useRef, useState } from 'react';
 
 import './AutosizeInput.css';
 
-interface AutosizeInputProps {
-  
-  autoFocus?: boolean;
-
-  className?: string;
-
-  value: string;
-
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
-
-}
-
-export const AutosizeInput = (props: AutosizeInputProps) => {
+export const AutosizeInput = (props: InputHTMLAttributes<HTMLInputElement>) => {
 
   const measure = useRef<HTMLSpanElement>(null);
 
@@ -31,11 +19,8 @@ export const AutosizeInput = (props: AutosizeInputProps) => {
         className="autosize-input-measure">{props.value}</span>
 
       <input 
-        autoFocus={props.autoFocus}
-        className={props.className}
-        value={props.value}
-        style={{ width: Math.max(width, 10)}}
-        onChange={props.onChange} />
+        {...props}
+        style={{ width: Math.max(width, 10)}} />
     </div>
   )
 

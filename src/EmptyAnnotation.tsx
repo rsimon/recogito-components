@@ -38,7 +38,9 @@ export const EmptyAnnotation = (props: EmptyAnnotationProps) => {
         </div>
 
         <div className="annotation-footer">
-          <AddTag />
+          <AddTag 
+            onAddTag={() => {}}
+            onCancel={() => {}} />
 
           <button className="save save-arrow">
             <ArrowRight size={20} />

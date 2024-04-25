@@ -14,6 +14,7 @@ export const Tag = (props: TagProps) => {
   return (
     <span className={props.isEditable ? 'tag editable' : 'tag'}>
       <span>{props.value}</span>
+      
       {props.isEditable && (
         <button>
           <X />
