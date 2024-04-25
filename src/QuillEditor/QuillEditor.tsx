@@ -14,7 +14,9 @@ interface QuillEditorProps {
 
   readOnly?: boolean;
 
-  value?: string;
+  value?: Delta;
+
+  onChange(value: Delta): void;
 
 }
 
@@ -31,13 +33,23 @@ export const QuillEditor = (props: QuillEditorProps) => {
     };
 
     const quill = new Quill(el.current, options);
+
     if (props.autoFocus && !props.readOnly)
-      quill.focus()
+      quill.focus();
 
     if (props.value)
-      quill.setContents(new Delta().insert(props.value));
+      quill.setContents(props.value);
+
+    const onChange = () => 
+        props.onChange && props.onChange(quill.getContents());
+
+    quill.on('text-change', onChange);
 
     setQuill(quill);
+
+    return () => {
+      quill.off('text-change', onChange);
+    }
   }, []);
 
   return (

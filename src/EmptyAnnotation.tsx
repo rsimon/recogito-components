@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import { ArrowRight, Detective } from '@phosphor-icons/react';
+import { Delta } from 'quill/core';
 import { Avatar } from './Avatar';
 import { QuillEditor, QuillEditorRoot, QuillEditorToolbar } from './QuillEditor';
 import { AddTag } from './Tags/AddTag';
@@ -15,6 +17,12 @@ interface EmptyAnnotationProps {
 }
 
 export const EmptyAnnotation = (props: EmptyAnnotationProps) => {
+
+  const [value, setValue] = useState<Delta>(new Delta());
+
+  useEffect(() => {
+    console.log(value);
+  }, [value]);
 
   const className = cn(
     'annotation empty',
@@ -47,6 +55,8 @@ export const EmptyAnnotation = (props: EmptyAnnotationProps) => {
         
         <div className="annotation-comment-wrapper">
           <QuillEditor 
+            value={value}
+            onChange={setValue}
             placeholder="Add a comment" />
         </div>
 
