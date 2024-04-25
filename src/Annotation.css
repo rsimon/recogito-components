@@ -78,9 +78,10 @@
 }
 
 .annotation .annotation-footer {
+  align-items: center;
   display: flex;
-  justify-content: flex-end;
-  padding: 8px 15px 0 15px;
+  justify-content: space-between;
+  padding: 3px 15px 5px 15px;
 }
 
 .annotation button.save {

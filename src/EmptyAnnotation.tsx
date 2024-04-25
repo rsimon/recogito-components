@@ -1,13 +1,29 @@
+import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
 import { Avatar } from './Avatar';
 import { QuillEditor, QuillEditorRoot, QuillEditorToolbar } from './QuillEditor';
+import { AddTag } from './Tags/AddTag';
+import { cn } from './util';
 
 import './EmptyAnnotation.css';
-import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
 
-export const EmptyAnnotation = () => {
+interface EmptyAnnotationProps {
+
+  isNote?: boolean;
+
+  isPrivate?: boolean;
+
+}
+
+export const EmptyAnnotation = (props: EmptyAnnotationProps) => {
+
+  const className = cn(
+    'annotation empty',
+    props.isNote ? 'note' : undefined,
+    props.isPrivate ? 'private' : undefined
+  );
 
   return (
-    <div className="annotation empty">
+    <div className={className}>
       <QuillEditorRoot>
         <div className="annotation-header">
           <Avatar />
@@ -22,6 +38,8 @@ export const EmptyAnnotation = () => {
         </div>
 
         <div className="annotation-footer">
+          <AddTag />
+
           <button className="save save-arrow">
             <ArrowRight size={20} />
           </button>

@@ -6,10 +6,11 @@ import { Annotation } from './Annotation';
 
 ReactDOM.createRoot(document.getElementById('app')!).render(
   <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
-    <EmptyAnnotation />
+    <EmptyAnnotation 
+      isPrivate={true} />
 
     <Annotation 
-      isEditable={true}
+      isEditable={false}
       tags={['historical reference', 'meter']}
       showReplyField={true} />
 
