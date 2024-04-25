@@ -13,13 +13,18 @@ ReactDOM.createRoot(document.getElementById('app')!).render(
     <Annotation 
       isNote={false}
       isPrivate={false}
-      isEditable={true}
+      isEditable={false}
       tags={['historical reference', 'meter', 'poetry', 'another tag']}
       showReplyField={true} />
 
     <Annotation 
-      isPrivate={true} 
-      value="Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi." />
+      value={[
+        "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi.", 
+        "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi.",
+        "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi.",
+        "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi.",
+        "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi." 
+      ]} />
 
     <Annotation 
       isNote={true} 

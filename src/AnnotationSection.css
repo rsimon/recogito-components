@@ -1,6 +1,11 @@
 .annotation-section {
   padding-bottom: 10px;
 }
+
+.annotation-section + .annotation-section {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .annotation-section .annotation-section-footer {
   display: flex;
   padding: 0.25rem 12px;

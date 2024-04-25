@@ -18,11 +18,13 @@ interface AnnotationProps {
 
   tags?: string[];
 
-  value?: string;
+  value?: string | string[];
 
 }
 
 export const Annotation = (props: AnnotationProps) => {
+
+  const values = Array.isArray(props.value) ? props.value : [props.value];
 
   const className = cn(
     'annotation',
@@ -33,11 +35,14 @@ export const Annotation = (props: AnnotationProps) => {
 
   return (
     <div className={className}>
-      <AnnotationSection
-        isEditable={props.isEditable}
-        isPrivate={props.isPrivate}
-        value={props.value} 
-        tags={props.tags} />
+      {values.map((value, idx) => (
+        <AnnotationSection
+          key={`index-${idx}`}
+          isEditable={props.isEditable}
+          isPrivate={props.isPrivate}
+          value={value} 
+          tags={props.tags} />
+      ))}
 
       {props.showReplyField && !props.isReadOnly && !props.isEditable && (
         <ReplyField />
