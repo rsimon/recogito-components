@@ -8,6 +8,10 @@
   padding: 0.25rem 12px;
 }
 
+.annotation-section.editable .annotation-comment-wrapper {
+  padding-bottom: 15px;
+}
+
 .annotation-section .align-right {
   justify-content: flex-end;
 }

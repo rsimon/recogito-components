@@ -21,7 +21,7 @@ interface AnnotationSectionProps {
 export const AnnotationSection = (props: AnnotationSectionProps) => {
 
   return (
-    <div className="annotation-section">
+    <div className={props.isEditable ? 'annotation-section editable' : 'annotation-section'}>
       <div className="annotation-header">
         <div className="annotation-header-left">
           {props.isPrivate ? (

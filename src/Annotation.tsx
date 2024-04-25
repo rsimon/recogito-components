@@ -1,10 +1,10 @@
+import { useState } from 'react';
 import { ReplyField } from './ReplyField';
+import { AnnotationSection } from './AnnotationSection';
+import { Interstitial } from './Interstitial';
 import { cn } from './util';
 
 import './Annotation.css';
-import { AnnotationSection } from './AnnotationSection';
-import { Interstitial } from './Interstitial';
-import { useState } from 'react';
 
 interface AnnotationProps {
 
