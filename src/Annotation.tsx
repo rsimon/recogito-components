@@ -3,6 +3,8 @@ import { cn } from './util';
 
 import './Annotation.css';
 import { AnnotationSection } from './AnnotationSection';
+import { Interstitial } from './Interstitial';
+import { useState } from 'react';
 
 interface AnnotationProps {
 
@@ -26,6 +28,8 @@ export const Annotation = (props: AnnotationProps) => {
 
   const values = Array.isArray(props.value) ? props.value : [props.value];
 
+  const [collapse, setCollapse] = useState(values.length > 3); 
+
   const className = cn(
     'annotation',
     props.isNote ? 'note' : undefined,
@@ -35,7 +39,25 @@ export const Annotation = (props: AnnotationProps) => {
 
   return (
     <div className={className}>
-      {values.map((value, idx) => (
+      {collapse ? (
+        <>
+          <AnnotationSection
+            isEditable={props.isEditable}
+            isPrivate={props.isPrivate}
+            value={values[0]} 
+            tags={props.tags} />
+
+          <Interstitial
+            label="Show 3 more" 
+            onClick={() => setCollapse(false)} />
+
+          <AnnotationSection
+            isEditable={props.isEditable}
+            isPrivate={props.isPrivate}
+            value={values[values.length - 1]} 
+            tags={props.tags} />
+        </>
+      ) : values.map((value, idx) => (
         <AnnotationSection
           key={`index-${idx}`}
           isEditable={props.isEditable}

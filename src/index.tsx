@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('app')!).render(
     <Annotation 
       isNote={false}
       isPrivate={false}
-      isEditable={false}
+      isEditable={true}
       tags={['historical reference', 'meter', 'poetry', 'another tag']}
       showReplyField={true} />
 
@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('app')!).render(
       value={[
         "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi.", 
         "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi.",
-        "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi.",
+        "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi. Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi.",
         "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi.",
         "Lorem ipsum dolor sit amet consectetur. Scelerisque magna nulla cum ultrices viverra tortor morbi." 
       ]} />

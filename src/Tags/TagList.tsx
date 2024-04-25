@@ -13,7 +13,7 @@ interface TagListProps {
 export const TagList = (props: TagListProps) => {
 
   return (
-    <ul className="taglist">
+    <ul className={props.isEditable ? 'taglist editable' : 'taglist'}>
       {props.tags.map(t => (
         <li key={t}>
           <Tag value={t} isEditable={props.isEditable} />
