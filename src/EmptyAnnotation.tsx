@@ -1,4 +1,4 @@
-import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
+import { ArrowRight, Detective } from '@phosphor-icons/react';
 import { Avatar } from './Avatar';
 import { QuillEditor, QuillEditorRoot, QuillEditorToolbar } from './QuillEditor';
 import { AddTag } from './Tags/AddTag';
@@ -26,7 +26,25 @@ export const EmptyAnnotation = (props: EmptyAnnotationProps) => {
     <div className={className}>
       <QuillEditorRoot>
         <div className="annotation-header">
-          <Avatar />
+          <div className="annotation-header-left">
+            {props.isPrivate ? (
+              <div className="private-avatar">
+                <div className="avatar-ring">
+                  <div className="avatar-inner">
+                    <Detective size={17} />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Avatar />
+            )}
+            <div className="annotation-author-details">
+              <div className="created-by">
+                {props.isPrivate ? 'Private' : 'Lorin'}
+              </div>
+            </div>
+          </div>
+
           <div className="annotation-toolbar-wrapper">
             <QuillEditorToolbar />
           </div>

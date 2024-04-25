@@ -1,12 +1,8 @@
-import { Detective, DotsThree } from '@phosphor-icons/react';
-import { Avatar } from './Avatar';
-import { AuthorDetails } from './AuthorDetails';
-import { QuillEditor, QuillEditorRoot } from './QuillEditor';
 import { ReplyField } from './ReplyField';
-import { TagList } from './Tags/TagList';
 import { cn } from './util';
 
 import './Annotation.css';
+import { AnnotationSection } from './AnnotationSection';
 
 interface AnnotationProps {
 
@@ -37,44 +33,13 @@ export const Annotation = (props: AnnotationProps) => {
 
   return (
     <div className={className}>
-      <div className="annotation-header">
-        <div className="annotation-header-left">
-          {props.isPrivate ? (
-            <div className="private-avatar">
-              <div className="avatar-ring">
-                <div className="avatar-inner">
-                  <Detective size={17} />
-                </div>
-              </div>
-            </div>
-          ) : (
-            <Avatar />
-          )}
-          <AuthorDetails isPrivate={props.isPrivate} />
-        </div>
+      <AnnotationSection
+        isEditable={props.isEditable}
+        isPrivate={props.isPrivate}
+        value={props.value} 
+        tags={props.tags} />
 
-        <div className="annotation-header-right">
-          <DotsThree size={20} />
-        </div>
-      </div>
-
-      <div className="annotation-comment-wrapper">
-        <QuillEditorRoot>
-          <QuillEditor 
-            readOnly={!props.isEditable}
-            value={props.value || 'Lorem ipsum dolor sit amet consectetur.' }/>
-        </QuillEditorRoot>
-      </div>
-
-      {props.tags?.length > 0 && (
-        <div className="annotation-taglist-wrapper">
-          <TagList 
-            tags={props.tags} 
-            isEditable={props.isEditable} />
-        </div>
-      )}
-
-      {props.showReplyField && !props.isReadOnly && (
+      {props.showReplyField && !props.isReadOnly && !props.isEditable && (
         <ReplyField />
       )}
     </div>

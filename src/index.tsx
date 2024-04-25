@@ -7,9 +7,12 @@ import { Annotation } from './Annotation';
 ReactDOM.createRoot(document.getElementById('app')!).render(
   <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
     <EmptyAnnotation 
-      isPrivate={true} />
+      isNote={false}
+      isPrivate={false} />
 
     <Annotation 
+      isNote={false}
+      isPrivate={false}
       isEditable={false}
       tags={['historical reference', 'meter']}
       showReplyField={true} />

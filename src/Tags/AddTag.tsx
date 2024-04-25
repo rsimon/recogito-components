@@ -27,6 +27,7 @@ export const AddTag = (props: AddTagProps) => {
   return editing ? (
     <div className="add-tag-editor">
       <AutosizeInput
+        autoFocus
         value={value}
         onChange={evt => setValue(evt.target.value)} 
         onKeyDown={onKeyDown} />
@@ -47,7 +48,7 @@ export const AddTag = (props: AddTagProps) => {
     <button 
       className="add-tag-trigger"
       onClick={() => setEditing(true)}>
-      <TagIcon size={12} /> Add Tag
+      <TagIcon size={12} /> Add a Tag
     </button>
   )
 
