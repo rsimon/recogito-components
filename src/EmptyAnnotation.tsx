@@ -38,11 +38,6 @@ export const EmptyAnnotation = (props: EmptyAnnotationProps) => {
             ) : (
               <Avatar />
             )}
-            <div className="annotation-author-details">
-              <div className="created-by">
-                {props.isPrivate ? 'Private' : 'Lorin'}
-              </div>
-            </div>
           </div>
 
           <div className="annotation-toolbar-wrapper">

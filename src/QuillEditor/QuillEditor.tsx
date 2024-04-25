@@ -8,6 +8,8 @@ import 'quill/dist/quill.core.css';
 
 interface QuillEditorProps {
 
+  autoFocus?: boolean;
+
   placeholder?: string;
 
   readOnly?: boolean;
@@ -29,6 +31,8 @@ export const QuillEditor = (props: QuillEditorProps) => {
     };
 
     const quill = new Quill(el.current, options);
+    if (props.autoFocus && !props.readOnly)
+      quill.focus()
 
     if (props.value)
       quill.setContents(new Delta().insert(props.value));

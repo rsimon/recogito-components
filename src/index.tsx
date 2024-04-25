@@ -13,8 +13,8 @@ ReactDOM.createRoot(document.getElementById('app')!).render(
     <Annotation 
       isNote={false}
       isPrivate={false}
-      isEditable={false}
-      tags={['historical reference', 'meter']}
+      isEditable={true}
+      tags={['historical reference', 'meter', 'poetry', 'another tag']}
       showReplyField={true} />
 
     <Annotation 

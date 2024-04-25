@@ -1,8 +1,9 @@
 .annotation .taglist {
   display: flex;
+  flex-wrap: wrap;
   font-size: 13px;
-  gap: 0.3rem;
+  gap: 0.375rem ;
   list-style-type: none;
   margin: 0;
-  padding: 0; 
+  padding: 0 0 2px 0; 
 }

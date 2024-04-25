@@ -2,7 +2,6 @@
   background-color: #fff;
   border-radius: 5px;
   overflow: hidden;
-  padding-bottom: 10px;
   position: relative;
   width: 340px;
 }
@@ -76,14 +75,14 @@
 }
 
 .annotation .annotation-taglist-wrapper {
-  padding: 0 12px 15px 12px;
+  padding: 0 12px 0 12px;
 }
 
 .annotation .annotation-footer {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 3px 15px 5px 15px;
+  padding: 0 15px 5px 15px;
 }
 
 .annotation button.save {
